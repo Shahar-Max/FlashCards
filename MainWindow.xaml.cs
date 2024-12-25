@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,10 +23,17 @@ namespace WpfApp1
         Dictionary<string, string> dict = new Dictionary<string, string>();
         string curValue = "";
         string curKey = "";
+        private List<FlashCardData> flashcards;
+
         public MainWindow()
         {
-            rnd = new Random();
             InitializeComponent();
+
+            bool init = FlashCardManager.Instance.LoadFromFile();
+            if (!init)
+                return;
+
+            rnd = new Random();
             Chapter1();
             RandomiseWord();
         }
@@ -68,6 +76,12 @@ namespace WpfApp1
                 counter++;
             }
             //dict.Keys[]
+        }
+
+        private FlashCardData GetRandomCard()
+        {
+            int card = rnd.Next(flashcards.Count);
+            return flashcards[card];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

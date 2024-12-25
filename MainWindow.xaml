@@ -29,6 +29,7 @@
             <Button x:Name="mainButton" Grid.Column="1" Background="#005F5F" Foreground="#00F0F0" FontSize="14" FontWeight="Bold" BorderBrush="Transparent" ToolTip="Main Action" Click="Button_Click">
                 <TextBlock Text="Button" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Button>
+            
 
             <!-- Right Arrow Button -->
             <Button x:Name="RightButton" Grid.Column="2" Background="#005F5F" BorderBrush="Transparent" ToolTip="Next" Click="RightButton_Click">
