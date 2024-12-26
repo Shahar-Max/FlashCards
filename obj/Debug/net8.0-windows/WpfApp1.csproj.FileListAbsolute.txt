@@ -43,3 +43,12 @@ C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\WpfApp1.csproj.CoreCompileInp
 C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\WpfApp1.sourcelink.json
 C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+C:\Users\ADMIN\FlashCards\bin\Debug\net8.0-windows\Wpf.Ui.dll
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\App.baml
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\WpfApp1.csproj.CopyComplete
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\NewMainWindow.g.cs
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\NewMainWindow.baml
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\FlashcardPage.g.cs
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\FlashcardPage.baml
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oJfJRtT/w0taey3nMDGpv0LR6ijFy6VLo957hpUKWjKTxFcxaYr+nir8cHLxn/+dW02cBRU5N57OzkqSPsK5JQ==",
+  "dgSpecHash": "vtD1U7M/Wt/Nh7YdAFSKmbBC9/dun2CNSKFdo68H/L9HoueOtNp0VwivdaRAMuVuXymVCyLqfir8V5UEeNHUng==",
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\FlashCards\\WpfApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\wpf-ui\\3.0.5\\wpf-ui.3.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

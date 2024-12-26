@@ -13,6 +13,12 @@
     <Compile Update="FlashCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="FlashcardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="NewMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="CreationWindow.xaml">
@@ -21,7 +27,13 @@
     <Page Update="FlashCard.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="FlashcardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NewMainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

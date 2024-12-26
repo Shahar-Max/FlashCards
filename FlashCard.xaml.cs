@@ -20,20 +20,20 @@ namespace WpfApp1
     /// </summary>
     public partial class FlashCard : UserControl
     {
-        private FlashCardData _data;
+        public FlashCardData CardData { get; private set; }
 
         public FlashCard(FlashCardData data)
         {
             InitializeComponent();
-            this._data = data;
-            fcPrompt.Content = _data.Word;
+            this.CardData = data;
+            fcPrompt.Content = CardData.Word;
 
-            fcPrompt.Click += (_, __) => Toggle();
+            //fcPrompt.Click += (_, __) => Toggle();
         }
 
         public void Toggle()
         {
-            fcPrompt.Content = fcPrompt.Content.Equals(_data.Definition) ? _data.Word : _data.Definition;
+            fcPrompt.Content = fcPrompt.Content.Equals(CardData.Definition) ? CardData.Word : CardData.Definition;
         }
     }
 }
