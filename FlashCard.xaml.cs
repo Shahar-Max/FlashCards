@@ -33,7 +33,7 @@ namespace WpfApp1
 
         public void Toggle()
         {
-            fcPrompt.Content = fcPrompt.Content.Equals(_data.Defintion) ? _data.Word : _data.Defintion;
+            fcPrompt.Content = fcPrompt.Content.Equals(_data.Definition) ? _data.Word : _data.Definition;
         }
     }
 }
