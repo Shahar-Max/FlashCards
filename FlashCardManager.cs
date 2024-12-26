@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace WpfApp1
         private static readonly string SAVE_PATH = "flashcards.json";
 
         private List<FlashCardData> flashCards;
+        private List<FlashCardData> usedCards;
         private Random rand;
 
         public static FlashCardManager Instance
@@ -26,14 +28,41 @@ namespace WpfApp1
 
         private FlashCardManager()
         {
-            flashCards = new List<FlashCardData>();
-            rand = new Random();
+            this.flashCards = new List<FlashCardData>();
+            this.usedCards = new List<FlashCardData>();
+            this.rand = new Random();
         }
 
         public FlashCardData? GetRandomFlashCard()
         {
-            return this.flashCards == null ? null : flashCards[rand.Next(flashCards.Count)];
+            if (this.flashCards == null || this.flashCards.Count == 0)
+                return null;
+
+            FlashCardData card = flashCards[rand.Next(flashCards.Count)];
+
+            return card;
         }
+
+        public void UseCard(FlashCardData card)
+        {
+            this.flashCards.Remove(card);
+            this.usedCards.Add(card);
+        }
+
+        public void ObliterateCard(FlashCardData card)
+        {
+            if (flashCards.Contains(card))
+                this.flashCards.Remove(card);
+            else
+                this.usedCards.Remove(card);
+        }
+
+        public void UnuseAllCards()
+        {
+            this.flashCards.AddRange(this.usedCards);
+            this.usedCards.Clear();
+        }
+
         public void AddFlashCard(FlashCardData flashCard)
         {
             this.flashCards.Add(flashCard);
@@ -52,12 +81,22 @@ namespace WpfApp1
 
         public bool LoadFromFile()
         {
-            return JsonUtils.Instance.GetFromFile<List<FlashCardData>>(SAVE_PATH, out flashCards);
+            List<FlashCardData> newCards = new List<FlashCardData>();
+            JsonUtils.Instance.GetFromFile<List<FlashCardData>>(SAVE_PATH, out newCards);
+
+            if (newCards != null)
+                this.flashCards = newCards;
+
+            return newCards != null;
         }
 
-        public bool SaveToFile()
+        public void SaveToFile()
         {
-            return JsonUtils.Instance.SaveToFile(this.flashCards, SAVE_PATH);
+            if (!File.Exists(SAVE_PATH))
+                File.Create(SAVE_PATH);
+
+            this.UnuseAllCards();
+            JsonUtils.Instance.SaveToFile(this.flashCards, SAVE_PATH);
         }
     }
 }

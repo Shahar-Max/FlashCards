@@ -55,5 +55,19 @@ namespace WpfApp1
 
             return true;
         }
+
+        public bool AppendToFile<T>(T @object, string path)
+        {
+            try
+            {
+                File.AppendAllText(path, JsonSerializer.Serialize(@object));
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

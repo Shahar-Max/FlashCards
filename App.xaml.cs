@@ -9,6 +9,9 @@ namespace WpfApp1
     /// </summary>
     public partial class App : Application
     {
+        void App_Exit(object sender, ExitEventArgs e)
+        {
+            FlashCardManager.Instance.SaveToFile();
+        }
     }
-
 }

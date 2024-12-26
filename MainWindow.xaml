@@ -6,42 +6,31 @@
         Background="#1E1E1E"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="800" Width="800">
+    <Grid Margin="0,300,0,300">
         <!-- Main Button Container -->
-        <Grid Width="1000" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#1E1E1E">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40"/>
-                <!-- Left Arrow Button -->
-                <ColumnDefinition Width="*"/>
-                <!-- Center Button -->
-                <ColumnDefinition Width="40"/>
-                <!-- Right Arrow Button -->
-
-            </Grid.ColumnDefinitions>
-
-            <!-- Left Arrow Button -->
-            <Button x:Name="LeftButton" Grid.Column="0" Background="#005F5F" BorderBrush="Transparent" ToolTip="Previous" Click="LeftButton_Click">
-                <Path Data="M10,20 L20,10 L20,15 L30,15 L30,25 L20,25 L20,30 Z" Fill="#00F0F0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Button>
-
-            <!-- Center Button -->
-            <Button x:Name="mainButton" Grid.Column="1" Background="#005F5F" Foreground="#00F0F0" FontSize="14" FontWeight="Bold" BorderBrush="Transparent" ToolTip="Main Action" Click="Button_Click">
-                <TextBlock Text="Button" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </Button>
-            
-
-            <!-- Right Arrow Button -->
-            <Button x:Name="RightButton" Grid.Column="2" Background="#005F5F" BorderBrush="Transparent" ToolTip="Next" Click="RightButton_Click">
-                <Path Data="M10,20 L20,10 L20,15 L30,15 L30,25 L20,25 L20,30 Z" Fill="#00F0F0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-                    <Path.RenderTransform>
-                        <ScaleTransform ScaleX="-1" />
-                    </Path.RenderTransform>
-                </Path>
-            </Button>
-
-        </Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Name="returnToPoolBtn">&lt;&lt;</Button>
+        <Viewbox Grid.Column="1" Grid.Row="0" Name="cardContainer"></Viewbox>
+        <Button Grid.Column="2" Grid.Row="0" Name="useCurrentCardBtn">&gt;&gt;</Button>
+        <Button Name="KILLKILLKILL" Grid.Row="1" Grid.Column="1" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#f14d4d" Foreground="#eeeeee">
+            <Viewbox>
+                <TextBlock>KILL</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Name="crtnModeBtn" Margin="0,-300,0,0" Padding="10" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Viewbox>
+                <TextBlock>Enter Creation Mode</TextBlock>
+            </Viewbox>
+        </Button>
     </Grid>
     
 </Window>

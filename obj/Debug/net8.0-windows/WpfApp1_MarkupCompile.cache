@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ADMIN\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\
+C:\Users\ADMIN\FlashCards\obj\Debug\net8.0-windows\
 WpfApp1
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\ADMIN\source\repos\WpfApp1\WpfApp1\App.xaml
-11407045341
+C:\Users\ADMIN\FlashCards\App.xaml
+31630266316
 
-4-1487985224
-1981451641563
-MainWindow.xaml;
+9-1189742436
+198-688555687
+CreationWindow.xaml;FlashCard.xaml;MainWindow.xaml;
 
 False
 
